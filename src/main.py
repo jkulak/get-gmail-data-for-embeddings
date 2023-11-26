@@ -37,7 +37,7 @@ def main():
 
     counter = 1
     for page_of_emails in fetch_emails(
-        service, fetch_size=1000, total_fetch=68500
+        service, fetch_size=500, total_fetch=68500
     ):
         emails = convert_messages_to_dict(page_of_emails, service)
         save_messages(emails, OUTPUT_FILE.format(counter))
